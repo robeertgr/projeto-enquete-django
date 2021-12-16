@@ -22,7 +22,7 @@ def vote( request, question_id):
     except KeyError:
         return render(request, 'polls/vote.html', {
             'question': question,
-            'error_message': "You didn't select a choice.",
+            'error_message': "Você não selecionou uma resposta!",
         })
     else:
         selected_choice.votes += 1
